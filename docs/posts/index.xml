@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on dubek.space</title>
+    <link>https://dubek.space/posts/</link>
+    <description>Recent content in Posts on dubek.space</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 02 Jan 2019 12:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://dubek.space/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test two</title>
+      <link>https://dubek.space/posts/2019-01-02-test-two/</link>
+      <pubDate>Wed, 02 Jan 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://dubek.space/posts/2019-01-02-test-two/</guid>
+      <description>Test two is here!
+Thank you.</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://dubek.space/posts/2019-01-01-hello-world/</link>
+      <pubDate>Tue, 01 Jan 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://dubek.space/posts/2019-01-01-hello-world/</guid>
+      <description>Hello world post first line of text is here!
+Second and last line.</description>
+    </item>
+    
+  </channel>
+</rss>
