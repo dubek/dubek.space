@@ -1,0 +1,11 @@
+{{ partial "header" . }}
+
+<div class='entry'>
+  <div class='container entry-content'>
+    <span>
+      {{- .Site.Params.info.title404 | default .Title -}}
+    </span>
+  </div>
+</div>
+
+{{ partial "footer" . }}
