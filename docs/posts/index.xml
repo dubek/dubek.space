@@ -30,5 +30,16 @@ Thank you.</description>
 Second and last line.</description>
     </item>
     
+    <item>
+      <title>chmod(1) is not atomic</title>
+      <link>https://dubek.space/posts/2016-10-18-chmod-not-atomic/</link>
+      <pubDate>Tue, 18 Oct 2016 12:00:00 +0200</pubDate>
+      
+      <guid>https://dubek.space/posts/2016-10-18-chmod-not-atomic/</guid>
+      <description>While manipulating files from several shell scripts in parallel, I wondered whether the chmod(1) utility adds or removes file permissions atomically. To check it up, I set up a small experiment. The conclusion: it&amp;rsquo;s not.
+The problem Assume a file with mode 400 (octal), which allows only the file&amp;rsquo;s owner user to read the file. We&amp;rsquo;ll now run two chmod commands:
+chmod g+r filename # Allow group to read chmod o+r filename # Allow others to read  Recall we started with mode 400.</description>
+    </item>
+    
   </channel>
 </rss>
