@@ -4,13 +4,13 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='While manipulating files from several shell scripts in parallel, I wondered whether the chmod(1) utility adds or removes file permissions atomically. To check it up, I set up a small experiment. The conclusion: it&rsquo;s not.
 The problem Assume a file with mode 400 (octal), which allows only the file&rsquo;s owner user to read the file. We&rsquo;ll now run two chmod commands:
-chmod g&#43;r filename # Allow group to read chmod o&#43;r filename # Allow others to read  Recall we started with mode 400.'>
+chmod g&#43;r filename # Allow group to read chmod o&#43;r filename # Allow others to read Recall we started with mode 400.'>
 <meta name='theme-color' content='#007a45'>
 
 <meta property='og:title' content='chmod(1) is not atomic • dubek.space'>
 <meta property='og:description' content='While manipulating files from several shell scripts in parallel, I wondered whether the chmod(1) utility adds or removes file permissions atomically. To check it up, I set up a small experiment. The conclusion: it&rsquo;s not.
 The problem Assume a file with mode 400 (octal), which allows only the file&rsquo;s owner user to read the file. We&rsquo;ll now run two chmod commands:
-chmod g&#43;r filename # Allow group to read chmod o&#43;r filename # Allow others to read  Recall we started with mode 400.'>
+chmod g&#43;r filename # Allow group to read chmod o&#43;r filename # Allow others to read Recall we started with mode 400.'>
 <meta property='og:url' content='https://dubek.space/posts/2016-10-18-chmod-not-atomic/'>
 <meta property='og:site_name' content='dubek.space'>
 <meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2016-10-18T12:00:00&#43;02:00'/><meta property='article:modified_time' content='2016-10-18T12:00:00&#43;02:00'/><meta name='twitter:card' content='summary'>
@@ -98,11 +98,8 @@ chmod g&#43;r filename # Allow group to read chmod o&#43;r filename # Allow othe
 
 <p>Assume a file with mode 400 (octal), which allows only the file&rsquo;s owner user to
 read the file. We&rsquo;ll now run two chmod commands:</p>
-
-<pre><code>chmod g+r filename    # Allow group to read
-chmod o+r filename    # Allow others to read
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod g+r filename    <span style="color:#75715e"># Allow group to read</span>
+chmod o+r filename    <span style="color:#75715e"># Allow others to read</span></code></pre></div>
 <p>Recall we started with mode 400. After the first chmod we expect mode 440, and after the second one we expect mode 444.</p>
 
 <p>If we switch the order and start again, we&rsquo;ll get mode 404 after <code>chmod o+r</code> and then mode 444 again after the remaining chmod.</p>
@@ -197,20 +194,6 @@ new_mode <span style="color:#f92672">=</span> mode_adjust (old_mode, S_ISDIR (ol
 
 
 </article>
-
-<nav class='entry-nav'>
-  <div class='container'><div class='next-entry sep-before'>
-      <a href='/posts/2019-01-01-hello-world/'>
-        <span class='screen-reader-text'>Next post: </span>Hello World<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
-    </div></div>
-</nav>
 
 
 

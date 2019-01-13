@@ -5,30 +5,10 @@
     <link>https://dubek.space/</link>
     <description>Recent content in Home on dubek.space</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 02 Jan 2019 12:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 18 Oct 2016 12:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://dubek.space/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Test two</title>
-      <link>https://dubek.space/posts/2019-01-02-test-two/</link>
-      <pubDate>Wed, 02 Jan 2019 12:00:00 +0200</pubDate>
-      
-      <guid>https://dubek.space/posts/2019-01-02-test-two/</guid>
-      <description>Test two is here!
-Thank you.</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://dubek.space/posts/2019-01-01-hello-world/</link>
-      <pubDate>Tue, 01 Jan 2019 12:00:00 +0200</pubDate>
-      
-      <guid>https://dubek.space/posts/2019-01-01-hello-world/</guid>
-      <description>Hello world post first line of text is here!
-Second and last line.</description>
-    </item>
     
     <item>
       <title>chmod(1) is not atomic</title>
@@ -38,7 +18,7 @@ Second and last line.</description>
       <guid>https://dubek.space/posts/2016-10-18-chmod-not-atomic/</guid>
       <description>While manipulating files from several shell scripts in parallel, I wondered whether the chmod(1) utility adds or removes file permissions atomically. To check it up, I set up a small experiment. The conclusion: it&amp;rsquo;s not.
 The problem Assume a file with mode 400 (octal), which allows only the file&amp;rsquo;s owner user to read the file. We&amp;rsquo;ll now run two chmod commands:
-chmod g+r filename # Allow group to read chmod o+r filename # Allow others to read  Recall we started with mode 400.</description>
+chmod g+r filename # Allow group to read chmod o+r filename # Allow others to read Recall we started with mode 400.</description>
     </item>
     
   </channel>
