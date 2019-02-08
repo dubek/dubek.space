@@ -25,7 +25,7 @@ chmod g&#43;r filename # Allow group to read chmod o&#43;r filename # Allow othe
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel='stylesheet' href='/assets/css/main.4a10984a.css'><style>
+<link rel='stylesheet' href='/assets/css/main.4a10984a.css'><link rel='stylesheet' href='/css/custom.css'><style>
 :root{--color-accent:#007a45;}
 </style>
 
@@ -57,7 +57,7 @@ chmod g&#43;r filename # Allow group to read chmod o&#43;r filename # Allow othe
       <main id='content'>
 
 
-<article lang='en' class='entry'>
+<article lang='en' dir='ltr' class='entry'>
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
@@ -99,8 +99,8 @@ chmod g&#43;r filename # Allow group to read chmod o&#43;r filename # Allow othe
 
 <p>Assume a file with mode 400 (octal), which allows only the file&rsquo;s owner user to
 read the file. We&rsquo;ll now run two chmod commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod g+r filename    <span style="color:#75715e"># Allow group to read</span>
-chmod o+r filename    <span style="color:#75715e"># Allow others to read</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">chmod g+r filename    <span class="c1"># Allow group to read</span>
+chmod o+r filename    <span class="c1"># Allow others to read</span></code></pre></div>
 <p>Recall we started with mode 400. After the first chmod we expect mode 440, and after the second one we expect mode 444.</p>
 
 <p>If we switch the order and start again, we&rsquo;ll get mode 404 after <code>chmod o+r</code> and then mode 444 again after the remaining chmod.</p>
@@ -110,30 +110,30 @@ chmod o+r filename    <span style="color:#75715e"># Allow others to read</span><
 <h2 id="the-experiment">The experiment</h2>
 
 <p>I wrote a script to attempt exposing the issue; it&rsquo;s called <code>stresss_chmod.sh</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
 touch dummyfile
 
-try_once<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  echo <span style="color:#e6db74">&#34;Setting dummyfile&#39;s mode to 400&#34;</span>
-  chmod <span style="color:#ae81ff">400</span> dummyfile
-  echo -n <span style="color:#e6db74">&#34;Racing two chmods... &#34;</span>
-  chmod g+r dummyfile &amp;
-  chmod o+r dummyfile &amp;
-  wait
-  newmode<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>stat --format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;%a&#39;</span> dummyfile<span style="color:#66d9ef">)</span>
-  echo <span style="color:#e6db74">&#34;dummyfile&#39;s new mode is </span>$newmode<span style="color:#e6db74">&#34;</span>
-  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$newmode<span style="color:#e6db74">&#34;</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;444&#34;</span> <span style="color:#f92672">]]</span> ; <span style="color:#66d9ef">then</span>
-          echo <span style="color:#e6db74">&#34;ERROR: expected mode 444 but got mode </span>$newmode<span style="color:#e6db74">&#34;</span>
-          exit <span style="color:#ae81ff">1</span>
-  <span style="color:#66d9ef">fi</span>
-  echo
-<span style="color:#f92672">}</span>
+try_once<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">echo</span> <span class="s2">&#34;Setting dummyfile&#39;s mode to 400&#34;</span>
+  chmod <span class="m">400</span> dummyfile
+  <span class="nb">echo</span> -n <span class="s2">&#34;Racing two chmods... &#34;</span>
+  chmod g+r dummyfile <span class="p">&amp;</span>
+  chmod o+r dummyfile <span class="p">&amp;</span>
+  <span class="nb">wait</span>
+  <span class="nv">newmode</span><span class="o">=</span><span class="k">$(</span>stat --format<span class="o">=</span><span class="s1">&#39;%a&#39;</span> dummyfile<span class="k">)</span>
+  <span class="nb">echo</span> <span class="s2">&#34;dummyfile&#39;s new mode is </span><span class="nv">$newmode</span><span class="s2">&#34;</span>
+  <span class="k">if</span> <span class="o">[[</span> <span class="s2">&#34;</span><span class="nv">$newmode</span><span class="s2">&#34;</span> !<span class="o">=</span> <span class="s2">&#34;444&#34;</span> <span class="o">]]</span> <span class="p">;</span> <span class="k">then</span>
+          <span class="nb">echo</span> <span class="s2">&#34;ERROR: expected mode 444 but got mode </span><span class="nv">$newmode</span><span class="s2">&#34;</span>
+          <span class="nb">exit</span> <span class="m">1</span>
+  <span class="k">fi</span>
+  <span class="nb">echo</span>
+<span class="o">}</span>
 
-<span style="color:#66d9ef">for</span> i in <span style="color:#f92672">{</span><span style="color:#ae81ff">1</span>..100<span style="color:#f92672">}</span> ; <span style="color:#66d9ef">do</span>
-  echo <span style="color:#e6db74">&#34;Attempt </span>$i<span style="color:#e6db74">:&#34;</span>
+<span class="k">for</span> i in <span class="o">{</span><span class="m">1</span>..100<span class="o">}</span> <span class="p">;</span> <span class="k">do</span>
+  <span class="nb">echo</span> <span class="s2">&#34;Attempt </span><span class="nv">$i</span><span class="s2">:&#34;</span>
   try_once
-<span style="color:#66d9ef">done</span></code></pre></div>
+<span class="k">done</span></code></pre></div>
 <p>The <code>try_once</code> function attempts to race the two chmod operations: it starts by
 setting the file to mode 400, and then performs the two chmod in parallels (the
 <code>&amp;</code> at the end of the line tells the shell to run this line in the background).
@@ -173,14 +173,14 @@ ERROR: expected mode 444 but got mode 404
 <h2 id="but-why">But why?</h2>
 
 <p>The explanation is quite simple if we examine the <a href="http://git.savannah.gnu.org/cgit/coreutils.git/tree/src/chmod.c#n267">source code</a> for the chmod(1) utility:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">old_mode <span style="color:#f92672">=</span> file_stats<span style="color:#f92672">-&gt;</span>st_mode;
-new_mode <span style="color:#f92672">=</span> mode_adjust (old_mode, S_ISDIR (old_mode) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>, umask_value,
-                        change, NULL);
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="n">old_mode</span> <span class="o">=</span> <span class="n">file_stats</span><span class="o">-&gt;</span><span class="n">st_mode</span><span class="p">;</span>
+<span class="n">new_mode</span> <span class="o">=</span> <span class="n">mode_adjust</span> <span class="p">(</span><span class="n">old_mode</span><span class="p">,</span> <span class="n">S_ISDIR</span> <span class="p">(</span><span class="n">old_mode</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">umask_value</span><span class="p">,</span>
+                        <span class="n">change</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
-<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span> S_ISLNK (old_mode))
-  {
-    <span style="color:#66d9ef">if</span> (chmodat (fts<span style="color:#f92672">-&gt;</span>fts_cwd_fd, file, new_mode) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
-      chmod_succeeded <span style="color:#f92672">=</span> true;</code></pre></div>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="n">S_ISLNK</span> <span class="p">(</span><span class="n">old_mode</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">chmodat</span> <span class="p">(</span><span class="n">fts</span><span class="o">-&gt;</span><span class="n">fts_cwd_fd</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">new_mode</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+      <span class="n">chmod_succeeded</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span></code></pre></div>
 <p>The <code>mode_adjust</code> function is implemented in <a href="http://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob;f=lib/modechange.c;h=971a9b3335cb715c235fc51a9960b778568882a8;hb=HEAD#l338">gnulib&rsquo;s modechange.c</a>.  It turns bits in the old mode on or off according to the requested change, and returns the new mode value. <code>chmodat</code> is defined to call <code>fchmodat(2)</code> which actually changes the file mode to <code>new_mode</code>.</p>
 
 <p>When the two chmod operations run in parallel, it might be the case that both of them fetch the original mode of the original file (400); then they both calcluate the required <code>new_mode</code>. One process will set <code>new_mode</code> to 404 and the other will set its <code>new_mode</code> to 440. The both <code>fchmodat</code> calls reach the kernel, which will perform them in one way or the other; the final mode will be either 404 or 440 but not the expected 444.</p>
@@ -195,6 +195,20 @@ new_mode <span style="color:#f92672">=</span> mode_adjust (old_mode, S_ISDIR (ol
 
 
 </article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='next-entry sep-before'>
+      <a href='/posts/2018-08-03-israel-cities-streets-orientation/'>
+        <span class='screen-reader-text'>Next post: </span>אוריינטציה של כיווני רחובות בערים בישראל<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
 
 
 
