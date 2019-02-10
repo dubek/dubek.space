@@ -7,13 +7,13 @@ The problem Assume a file with mode 400 (octal), which allows only the file&rsqu
 chmod g&#43;r filename # Allow group to read chmod o&#43;r filename # Allow others to read Recall we started with mode 400.'>
 <meta name='theme-color' content='#007a45'>
 
-<meta property='og:title' content='chmod(1) is not atomic • dubek.space'>
+<meta property='og:title' content='chmod(1) is not atomic'>
 <meta property='og:description' content='While manipulating files from several shell scripts in parallel, I wondered whether the chmod(1) utility adds or removes file permissions atomically. To check it up, I set up a small experiment. The conclusion: it&rsquo;s not.
 The problem Assume a file with mode 400 (octal), which allows only the file&rsquo;s owner user to read the file. We&rsquo;ll now run two chmod commands:
 chmod g&#43;r filename # Allow group to read chmod o&#43;r filename # Allow others to read Recall we started with mode 400.'>
 <meta property='og:url' content='https://dubek.space/posts/2016-10-18-chmod-not-atomic/'>
 <meta property='og:site_name' content='dubek.space'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2016-10-18T12:00:00&#43;02:00'/><meta property='article:modified_time' content='2016-10-18T12:00:00&#43;02:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2016-10-18T12:00:00&#43;02:00'/><meta property='article:modified_time' content='2016-10-18T12:00:00&#43;02:00'/><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@dubek'>
 
 <meta name="generator" content="Hugo 0.53" />
 
