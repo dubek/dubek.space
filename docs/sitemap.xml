@@ -1,15 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://dubek.space/</loc>
-    <lastmod>2019-02-13T12:00:00+02:00</lastmod>
+    <lastmod>2021-09-29T12:00:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://dubek.space/posts/</loc>
-    <lastmod>2019-02-13T12:00:00+02:00</lastmod>
+    <lastmod>2021-09-29T12:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dubek.space/posts/2021-09-21-kvm-forum-2021-confidential-computing/</loc>
+    <lastmod>2021-09-29T12:00:00+02:00</lastmod>
   </url>
   
   <url>
