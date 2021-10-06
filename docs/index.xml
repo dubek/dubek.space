@@ -18,7 +18,7 @@
       <guid>https://dubek.space/posts/2021-09-21-kvm-forum-2021-confidential-computing/</guid>
       <description>As part of work done at IBM Research on Confidential Computing (specifically with AMD SEV), I participated in two talks presented in KVM Forum 2021.
 The first one deals with securing the boot process of memory-encrypted Linux VMs. It describes changes we contirbuted to OVMF and QEMU. [youtube | slides]
-The second talk describes the challenges of live migration in SEV and SEV-ES guests and our attempts to tackle them. This is still work-in-progress.</description>
+In the talk I mention that the QEMU patches are still under review, but since then they have been merged and will be available starting from QEMU 6.</description>
     </item>
     
     <item>
