@@ -27,3 +27,12 @@ Source for generating https://dubek.space/ with Hugo.  Blog posts are under `con
     # Push to github, which will update github pages (AKA dubek.space) from
     # the docs directory
     git push
+
+### Updating themes/minimo
+
+See [instructions](https://minimo.netlify.app/docs/updating/), but largely:
+
+    rm -rf themes/minimo
+    git clone --depth 1 https://github.com/MunifTanjim/minimo themes/minimo
+    git add themes/minimo
+    git commit -m "Update themes/minimo"
