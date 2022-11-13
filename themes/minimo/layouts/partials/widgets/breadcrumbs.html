@@ -5,7 +5,7 @@
 
 {{- define "breadcrumbs_add_parents" -}}
   {{- .Scratch.Set "parent" .Page.Parent -}}
-  {{- if eq .Page.Kind "taxonomy" -}}
+  {{- if eq .Page.Kind "term" -}}
     {{- .Scratch.Set "parent" ( .Page.Site.GetPage ( print "/" .Page.Data.Plural ) ) -}}
   {{- end -}}
 
@@ -32,7 +32,7 @@
           {{- $crumb := ( index $crumbs ( sub $length ( add $i 1 ) ) ) -}}
           <li>
           {{- if lt ( add $i 1 ) $length -}}
-            <a href='{{- $crumb.URL -}}'>
+            <a href='{{- $crumb.RelPermalink -}}'>
               {{- $crumb.LinkTitle -}}
             </a>
           {{- else -}}
