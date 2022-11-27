@@ -79,6 +79,7 @@ titleSeparator = "•"
 [params.social]
 github = "dubek"
 twitter = "dubek"
+mastodon = "dubek"
 
 [params.comments]
 enable = false
