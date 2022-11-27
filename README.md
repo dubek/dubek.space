@@ -34,5 +34,7 @@ See [instructions](https://minimo.netlify.app/docs/updating/), but largely:
 
     rm -rf themes/minimo
     git clone --depth 1 https://github.com/MunifTanjim/minimo themes/minimo
+    rm -rf themes/minimo/.git
+    # Remove .js files and scripts and packages*.json
     git add themes/minimo
     git commit -m "Update themes/minimo"
