@@ -4,7 +4,7 @@ title = "dubek.space"
 copyright = ""
 
 theme = "minimo"
- 
+
 # Github pages copies the /docs folder into the public site root dir
 publishDir = "docs"
 
