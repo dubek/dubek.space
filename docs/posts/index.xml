@@ -5,10 +5,21 @@
     <link>https://dubek.space/posts/</link>
     <description>Recent content in Posts on dubek.space</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 29 Sep 2021 12:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 08 Jan 2023 08:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://dubek.space/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>KVM Forum 2022 and Linux Plumbers Conference 2022 talks on Confidential Computing</title>
+      <link>https://dubek.space/posts/2023-01-08-kvm-forum-lpc-2022-confidential-computing/</link>
+      <pubDate>Sun, 08 Jan 2023 08:00:00 +0200</pubDate>
+      
+      <guid>https://dubek.space/posts/2023-01-08-kvm-forum-lpc-2022-confidential-computing/</guid>
+      <description>As part of work done at IBM Research on Confidential Computing (specifically with AMD SEV and SNP), me and Tobin Feldman-Fitzthum gave two talks during conferences in Dublin, Ireland in September 2022.
+The first talk was in Linux Plumbers Conference 2022 (Confidential Computing microconference); it presents various options for booting confidential VMs with encrypted disk and discusses the tradeoffs of the different approaches. [youtube | slides]
+The second talk describes various options for unifying the way confidential attestation covers the guest workload among different platforms.</description>
+    </item>
     
     <item>
       <title>KVM Forum 2021 talks on Confidential Computing</title>
@@ -17,7 +28,7 @@
       
       <guid>https://dubek.space/posts/2021-09-21-kvm-forum-2021-confidential-computing/</guid>
       <description>As part of work done at IBM Research on Confidential Computing (specifically with AMD SEV), I participated in two talks presented in KVM Forum 2021.
-The first one deals with securing the boot process of memory-encrypted Linux VMs. It describes changes we contirbuted to OVMF and QEMU. [youtube | slides]
+The first one deals with securing the boot process of memory-encrypted Linux VMs. It describes changes we contributed to OVMF and QEMU. [youtube | slides]
 In the talk I mention that the QEMU patches are still under review, but since then they have been merged and will be available starting from QEMU 6.</description>
     </item>
     
