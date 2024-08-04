@@ -4,66 +4,51 @@
     <title>Home on dubek.space</title>
     <link>https://dubek.space/</link>
     <description>Recent content in Home on dubek.space</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 08 Jan 2023 08:00:00 +0200</lastBuildDate>
-    
-	<atom:link href="https://dubek.space/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 04 Aug 2024 08:00:00 -0400</lastBuildDate>
+    <atom:link href="https://dubek.space/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The short story of curl CVE-2024-7264</title>
+      <link>https://dubek.space/posts/2024-08-04-curl-cve-2024-7264/</link>
+      <pubDate>Sun, 04 Aug 2024 08:00:00 -0400</pubDate>
+      <guid>https://dubek.space/posts/2024-08-04-curl-cve-2024-7264/</guid>
+      <description>It started when Daniel Stenberg, the curl project maintainer, announced the curl 8.9.0 release:&#xA;I was curious about CVE-2024-6197: it was a call to free(buf) where buf is a variable on the stack. Since this doesn&amp;rsquo;t depend on specific content of buf, and should happen every time this code is reached, why wasn&amp;rsquo;t it caught earlier during CI tests?&#xA;The answer is that it&amp;rsquo;s a bit hard to get to that area of the code (parsing of certificate ASN.</description>
+    </item>
     <item>
       <title>KVM Forum 2022 and Linux Plumbers Conference 2022 talks on Confidential Computing</title>
       <link>https://dubek.space/posts/2023-01-08-kvm-forum-lpc-2022-confidential-computing/</link>
       <pubDate>Sun, 08 Jan 2023 08:00:00 +0200</pubDate>
-      
       <guid>https://dubek.space/posts/2023-01-08-kvm-forum-lpc-2022-confidential-computing/</guid>
-      <description>As part of work done at IBM Research on Confidential Computing (specifically with AMD SEV and SNP), me and Tobin Feldman-Fitzthum gave two talks during conferences in Dublin, Ireland in September 2022.
-The first talk was in Linux Plumbers Conference 2022 (Confidential Computing microconference); it presents various options for booting confidential VMs with encrypted disk and discusses the tradeoffs of the different approaches. [youtube | slides]
-The second talk describes various options for unifying the way confidential attestation covers the guest workload among different platforms.</description>
+      <description>As part of work done at IBM Research on Confidential Computing (specifically with AMD SEV and SNP), me and Tobin Feldman-Fitzthum gave two talks during conferences in Dublin, Ireland in September 2022.&#xA;The first talk was in Linux Plumbers Conference 2022 (Confidential Computing microconference); it presents various options for booting confidential VMs with encrypted disk and discusses the tradeoffs of the different approaches. [youtube | slides]&#xA;The second talk describes various options for unifying the way confidential attestation covers the guest workload among different platforms.</description>
     </item>
-    
     <item>
       <title>KVM Forum 2021 talks on Confidential Computing</title>
       <link>https://dubek.space/posts/2021-09-21-kvm-forum-2021-confidential-computing/</link>
       <pubDate>Wed, 29 Sep 2021 12:00:00 +0200</pubDate>
-      
       <guid>https://dubek.space/posts/2021-09-21-kvm-forum-2021-confidential-computing/</guid>
-      <description>As part of work done at IBM Research on Confidential Computing (specifically with AMD SEV), I participated in two talks presented in KVM Forum 2021.
-The first one deals with securing the boot process of memory-encrypted Linux VMs. It describes changes we contributed to OVMF and QEMU. [youtube | slides]
-In the talk I mention that the QEMU patches are still under review, but since then they have been merged and will be available starting from QEMU 6.</description>
+      <description>As part of work done at IBM Research on Confidential Computing (specifically with AMD SEV), I participated in two talks presented in KVM Forum 2021.&#xA;The first one deals with securing the boot process of memory-encrypted Linux VMs. It describes changes we contributed to OVMF and QEMU. [youtube | slides]&#xA;In the talk I mention that the QEMU patches are still under review, but since then they have been merged and will be available starting from QEMU 6.</description>
     </item>
-    
     <item>
       <title>מספר תעודת הזהות חשוף בגלויות ההצבעה לבחירות</title>
       <link>https://dubek.space/posts/2019-02-08-israel-elections-barcode-reveals-id-number/</link>
       <pubDate>Fri, 08 Feb 2019 12:00:00 +0200</pubDate>
-      
       <guid>https://dubek.space/posts/2019-02-08-israel-elections-barcode-reveals-id-number/</guid>
-      <description>עדכון מה- 13/2/2019: משרד הפנים הודיע שיוריד את מספר הזהות מהברקוד; ראו תגובה בסוף.
-באוקטובר 2018 קיבלתי בתיבת הדואר גלויה ממשרד הפנים להצבעה לרשויות המקומיות. הגלויה כמובן מוענה אלי (כלומר הכילה את שמי וכתובתי) וכן ציינה את מיקום הקלפי בו הייתי אמור להצביע ביום הבחירות. אלה כמובן פיסות מידע גלויות לכל מי שמציץ בכל מכתב שמונח בתיבת הדואר שלי.
-אבל, בצד השני של הגלויה מודפס בר-קוד קטן. הבר-קוד הדו-ממדי הזה הוא בפורמט Data Matrix — שיטה לקידוד מחרוזת של מספרים או אותיות — שבדרך-כלל משמשת לצרכי משלוח (למשל, כדי לקודד את המיקוד של היעד עבור שמכונה שממיינת דואר).</description>
+      <description>עדכון מה- 13/2/2019: משרד הפנים הודיע שיוריד את מספר הזהות מהברקוד; ראו תגובה בסוף.&#xA;באוקטובר 2018 קיבלתי בתיבת הדואר גלויה ממשרד הפנים להצבעה לרשויות המקומיות. הגלויה כמובן מוענה אלי (כלומר הכילה את שמי וכתובתי) וכן ציינה את מיקום הקלפי בו הייתי אמור להצביע ביום הבחירות. אלה כמובן פיסות מידע גלויות לכל מי שמציץ בכל מכתב שמונח בתיבת הדואר שלי.&#xA;אבל, בצד השני של הגלויה מודפס בר-קוד קטן. הבר-קוד הדו-ממדי הזה הוא בפורמט Data Matrix — שיטה לקידוד מחרוזת של מספרים או אותיות — שבדרך-כלל משמשת לצרכי משלוח (למשל, כדי לקודד את המיקוד של היעד עבור שמכונה שממיינת דואר).</description>
     </item>
-    
     <item>
       <title>אוריינטציה של כיווני רחובות בערים בישראל</title>
       <link>https://dubek.space/posts/2018-08-03-israel-cities-streets-orientation/</link>
       <pubDate>Fri, 03 Aug 2018 12:00:00 +0200</pubDate>
-      
       <guid>https://dubek.space/posts/2018-08-03-israel-cities-streets-orientation/</guid>
-      <description>ביולי 2018 נתקלתי בפוסט של Geoff Boeing שמפתח את ספריית OSMnx לניתוח מידע קרטוגרפי. הוא תיאר שימוש בספריה כדי ליצור תרשים שמתאר את התפלגות הכיוונים של רחובות בערים שונות בעולם.
-השתמשתי בקוד שלו (בשיפורים קלים) והפעלתי אותו על 12 הערים הגדולות בישראל (לפי ויקיפדיה). הנה התוצאה:
-הקוד שמייצר את התרשים נמצא ברשיון MIT ב- GitHub.</description>
+      <description>ביולי 2018 נתקלתי בפוסט של Geoff Boeing שמפתח את ספריית OSMnx לניתוח מידע קרטוגרפי. הוא תיאר שימוש בספריה כדי ליצור תרשים שמתאר את התפלגות הכיוונים של רחובות בערים שונות בעולם.&#xA;השתמשתי בקוד שלו (בשיפורים קלים) והפעלתי אותו על 12 הערים הגדולות בישראל (לפי ויקיפדיה). הנה התוצאה:&#xA;הקוד שמייצר את התרשים נמצא ברשיון MIT ב- GitHub.</description>
     </item>
-    
     <item>
       <title>chmod(1) is not atomic</title>
       <link>https://dubek.space/posts/2016-10-18-chmod-not-atomic/</link>
       <pubDate>Tue, 18 Oct 2016 12:00:00 +0200</pubDate>
-      
       <guid>https://dubek.space/posts/2016-10-18-chmod-not-atomic/</guid>
-      <description>While manipulating files from several shell scripts in parallel, I wondered whether the chmod(1) utility adds or removes file permissions atomically. To check it up, I set up a small experiment. The conclusion: it&amp;rsquo;s not.
-The problem Assume a file with mode 400 (octal), which allows only the file&amp;rsquo;s owner user to read the file. We&amp;rsquo;ll now run two chmod commands:
-chmod g+r filename # Allow group to readchmod o+r filename # Allow others to readRecall we started with mode 400.</description>
+      <description>While manipulating files from several shell scripts in parallel, I wondered whether the chmod(1) utility adds or removes file permissions atomically. To check it up, I set up a small experiment. The conclusion: it&amp;rsquo;s not.&#xA;The problem Assume a file with mode 400 (octal), which allows only the file&amp;rsquo;s owner user to read the file. We&amp;rsquo;ll now run two chmod commands:&#xA;chmod g+r filename # Allow group to read chmod o+r filename # Allow others to read Recall we started with mode 400.</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,40 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://dubek.space/</loc>
-    <lastmod>2023-01-08T08:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2024-08-04T08:00:00-04:00</lastmod>
+  </url><url>
     <loc>https://dubek.space/posts/</loc>
-    <lastmod>2023-01-08T08:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2024-08-04T08:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://dubek.space/posts/2024-08-04-curl-cve-2024-7264/</loc>
+    <lastmod>2024-08-04T08:00:00-04:00</lastmod>
+  </url><url>
     <loc>https://dubek.space/posts/2023-01-08-kvm-forum-lpc-2022-confidential-computing/</loc>
     <lastmod>2023-01-08T08:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dubek.space/posts/2021-09-21-kvm-forum-2021-confidential-computing/</loc>
     <lastmod>2021-10-06T11:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dubek.space/posts/2019-02-08-israel-elections-barcode-reveals-id-number/</loc>
     <lastmod>2019-02-13T12:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dubek.space/posts/2018-08-03-israel-cities-streets-orientation/</loc>
     <lastmod>2018-08-03T12:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dubek.space/posts/2016-10-18-chmod-not-atomic/</loc>
     <lastmod>2016-10-18T12:00:00+02:00</lastmod>
   </url>
-  
 </urlset>
